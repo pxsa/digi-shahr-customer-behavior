@@ -1,0 +1,25 @@
+services:
+
+  postgres:
+    image: postgres:16
+    container_name: vamland_postgres
+    environment:
+      POSTGRES_DB: vamland
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./data/vamland_postgres.sql:/docker-entrypoint-initdb.d/vamland_postgres.sql:ro
+
+  metabase:
+    image: metabase/metabase:latest
+    container_name: vamland_metabase
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:

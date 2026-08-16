@@ -57,4 +57,4 @@ SUMMARY_FA.md   one-page summary for the CEO, in Persian
 
 ## Notes
 
-This was a ~6 hour task with a 5-day deadline, but they only gave me 2 and half days and it takes more than 15 hours ;(
+This was a ~6 hour task with a 3-day deadline, it takes more than 15 hours ;(
